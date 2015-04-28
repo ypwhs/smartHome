@@ -13,6 +13,8 @@
 		C008F97C1AEFE00F005E8E6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C008F97B1AEFE00F005E8E6A /* Images.xcassets */; };
 		C008F97F1AEFE00F005E8E6A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C008F97D1AEFE00F005E8E6A /* LaunchScreen.xib */; };
 		C008F98B1AEFE00F005E8E6A /* smarthomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008F98A1AEFE00F005E8E6A /* smarthomeTests.swift */; };
+		C008F9971AEFE04E005E8E6A /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = C008F9951AEFE04E005E8E6A /* ytcpsocket.c */; };
+		C008F9981AEFE04E005E8E6A /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008F9961AEFE04E005E8E6A /* ytcpsocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 		C008F9841AEFE00F005E8E6A /* smarthomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smarthomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C008F9891AEFE00F005E8E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C008F98A1AEFE00F005E8E6A /* smarthomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smarthomeTests.swift; sourceTree = "<group>"; };
+		C008F9941AEFE04E005E8E6A /* smarthome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "smarthome-Bridging-Header.h"; sourceTree = "<group>"; };
+		C008F9951AEFE04E005E8E6A /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		C008F9961AEFE04E005E8E6A /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +84,13 @@
 			children = (
 				C008F9741AEFE00F005E8E6A /* AppDelegate.swift */,
 				C008F9761AEFE00F005E8E6A /* ViewController.swift */,
+				C008F9951AEFE04E005E8E6A /* ytcpsocket.c */,
+				C008F9961AEFE04E005E8E6A /* ytcpsocket.swift */,
 				C008F9781AEFE00F005E8E6A /* Main.storyboard */,
 				C008F97B1AEFE00F005E8E6A /* Images.xcassets */,
 				C008F97D1AEFE00F005E8E6A /* LaunchScreen.xib */,
 				C008F9721AEFE00F005E8E6A /* Supporting Files */,
+				C008F9941AEFE04E005E8E6A /* smarthome-Bridging-Header.h */,
 			);
 			path = smarthome;
 			sourceTree = "<group>";
@@ -212,7 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C008F9981AEFE04E005E8E6A /* ytcpsocket.swift in Sources */,
 				C008F9771AEFE00F005E8E6A /* ViewController.swift in Sources */,
+				C008F9971AEFE04E005E8E6A /* ytcpsocket.c in Sources */,
 				C008F9751AEFE00F005E8E6A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,9 +352,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = smarthome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "smarthome/smarthome-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +366,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = smarthome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "smarthome/smarthome-Bridging-Header.h";
 			};
 			name = Release;
 		};
